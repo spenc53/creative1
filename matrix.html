@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Matrix Rain</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway">
+    <style>
+      * {
+        color: white;
+        margin:0;
+        padding:0;
+      }
+
+      * {
+        font-family: "Raleway", Arial, sans-serif;
+      }
+			h1 {
+        letter-spacing: 6px;
+        display: block;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 50px;
+      }
+
+      body {
+        background: black;
+      }
+
+      canvas {
+        display: block;
+      }
+
+      #buttons {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color:black;
+      }
+
+      .button {
+        background-color: white;
+        border: 2px solid #008CBA; //blue
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+
+      .blue {
+        color:black;
+      }
+
+      .blue:hover {
+        background-color: #008CBA;
+        color:white;
+      }
+
+      .red {
+        border: 2px solid #f44336;
+        color:black;
+      }
+
+      .red:hover {
+        background-color: #f44336;
+        color:white;
+      }
+
+      input {
+        color:black;
+      }
+
+      #colors {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      input[type=number] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid white;
+        background: black;
+        color:white;
+        font-size: 30px;
+      }
+
+      #opening {
+        opacity:1;
+        animation-name: fade;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+      }
+
+      #title{
+        animation-name: glow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        /*text-shadow: 2px 2px;*/
+        text-shadow: 1px 1px 2px white, 0 0 50px blue, 0 0 25px darkblue;
+      }
+
+      @keyframes fade {
+          0%   {opacity:0;}
+          25%  {opacity:.25;}
+          50%  {opacity:.5;}
+          75%  {opacity:.75;}
+          100% {opacity:1;}
+      }
+
+      @keyframes glow {
+        0%   {text-shadow: 1px 1px 10px white, 0 0 90px navy, 0 0 45px darkblue;}
+        25%  {text-shadow: 1px 1px 8px white, 0 0 80px navy, 0 0 40px darkblue;}
+        50%  {text-shadow: 1px 1px 6px white, 0 0 70px purple, 0 0 35px purple;}
+        75%  {text-shadow: 1px 1px 8px white, 0 0 80px red, 0 0 40px magenta;}
+        100% {text-shadow: 1px 1px 10px white, 0 0 90px red, 0 0 45px magenta;}
+      }
+    </style>
+    <!-- <script src="jquery-3.1.1.min.js"></script> -->
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="matrix.js" charset="UTF-8"></script>
+  </head>
+
+  <body>
+    <div id="opening">
+      <br/>
+      <br/>
+      <h1 id="title">PREPARE TO ENTER THE MATRIX</h1>
+      <br/>
+      <!-- Need Inputs for the color values -->
+      <form id="colors">
+        <label for="red">Max Red Color Value:</label>
+        <input type="number" id="red" name="red" min="0" max="255" step="5" value="0"><br/>
+        <label for="green">Max Green Color Value:</label>
+        <input type="number" id="green" name="green" min="1" max="255" step="5" value="255"><br/>
+        <label for="blue">Max Blue Color Value:</label>
+        <input type="number" id="blue" name="blue" min="1" max="255" step="5" value="0"><br/>
+      </form>
+      <br/>
+      <div id="buttons">
+        <button class="button blue" id="goBack">Take the Blue Pill</button>
+        <button class="button red" id="startButton">Take the Red Pill</button>
+      </div>
+    </div>
+    <canvas id="matrix"></canvas>
+
+    <script type="text/javascript">
+
+    </script>
+  </body>
+</html

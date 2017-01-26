@@ -1,0 +1,105 @@
+#game-screen {
+  float:left;
+  width: 700px;
+  height: 700px;
+  border: 2px solid black;
+  margin:10px;
+  background-image: url('background.jpg');
+  background-size:cover;
+}
+
+#high-scores-table {
+  height: 700px;
+  width: 300px;
+  border: 2px solid black;
+  float:left;
+  margin:10px;
+}
+
+#high-scores-title {
+  text-align: center;
+  text-decoration: underline;
+}
+
+#high-scores {
+  text-decoration: none;
+  font-size: 20;
+}
+
+#person {
+  position: absolute;
+  display: block;
+  left: 100px;
+  top: 150px;
+  border-radius: 5px/5px;
+  border: solid 21px #000;
+  width: 50px;
+  height: 50px;
+}
+
+.object {
+  position: absolute;
+  display:block;
+  left: 0px;
+  top: 0px;
+  width: 14px;
+  height: 14px;
+  float:none;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#info {
+  position:absolute;;
+  top: 10px;
+  left: 10px;
+  margin:10px;
+  border: 1px solid black;
+  padding:5px;
+  text-align: center;
+  background-color: white;
+}
+
+.dot {
+  position:absolute;
+  background: black;
+  width:2px;
+  height:2px;
+}
+
+#progress-bar {
+  border:3px solid black;
+  width:0%;
+}
+
+#gameover {
+  margin: 10px;
+  position:absolute;
+  visibility: hidden;
+  top:300px;
+  left:200px;
+  border:2px solid black;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 20px;
+  padding:20px;
+  font-weight: 400;
+  width:40%;
+  background: white;
+}
+
+.verticalLine {
+  border-left: 1px solid #bbb;
+}
+
+.play-again {
+  padding:5px;
+}
+.play-again:hover {
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}

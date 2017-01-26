@@ -1,0 +1,49 @@
+#grad1 {
+  /*height: 100%;
+  width:100%;*/
+  background-color: white;
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  opacity:1;
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+#names {
+  animation-name: name;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;;
+  animation-direction: alternate;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#footer {
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;;
+    animation-direction: alternate;
+}
+
+#canvasContainer{
+  height:500px;
+  border:1px solid black;
+  background: #061928;
+}
+
+@keyframes name {
+  0%   {color:blue;}
+  25%  {color:red;}
+  50%  {color:green;}
+  75%  {color:red;}
+  100% {color:blue;}
+}
+
+@keyframes fade {
+    0%   {opacity:0;}
+    25%  {opacity:.25;}
+    50%  {opacity:.5;}
+    75%  {opacity:.75;}
+    100% {opacity:1;}
+}
