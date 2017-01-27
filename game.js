@@ -186,6 +186,7 @@ $(document).ready(() => {
 
     xhr.send();
   }
+
   $('#submit-score').click( () => {
     $('#submit-score').prop('disabled', true);
     var createCORSRequest = function (method, url) {
@@ -206,7 +207,7 @@ $(document).ready(() => {
     var xhr = createCORSRequest(method, url);
 
     xhr.onload = function () {
-      // Success code goes here.
+      getScores();
     };
 
     xhr.onerror = function () {
